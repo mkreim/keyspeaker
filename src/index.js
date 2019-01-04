@@ -25,20 +25,33 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
-        onKeyDown={e => this.onKeyPressed(e)}
-        tabIndex="0"
-        style={{
-          width: '100%',
-          height: '100vh',
-          backgroundColor: 'black',
-          color: this.state.color,
-          fontSize: '800px',
-          textAlign: 'center',
-        }}
-      >
-        {this.state.lastKey ? this.state.lastKey : '🐑'}
-      </div>
+      <React.Fragment>
+        <div
+          onKeyDown={e => this.onKeyPressed(e)}
+          tabIndex="0"
+          style={{
+            width: '100%',
+            height: '100vh',
+            backgroundColor: 'black',
+            color: this.state.color,
+            fontSize: '800px',
+            textAlign: 'center',
+          }}
+        >
+          {this.state.lastKey ? this.state.lastKey : '🐑'}
+        </div>
+        <footer
+          style={{
+            marginTop: '2em',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'flex-end',
+            fontSize: '0.9em',
+          }}
+        >
+          <a href="http://www.perfect-kreim.de/impressum.html">impressum</a>
+        </footer>
+      </React.Fragment>
     );
   }
 }
